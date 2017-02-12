@@ -1,0 +1,281 @@
+<html><head>
+  <link href='/favicon.ico' id="favicon" rel='shortcut icon' type='image/x-icon'>
+  <link rel="stylesheet" type="text/css" href="rogo.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+  </script>
+  <title>Ro GO!</title>
+</head>
+<body>
+  <div id="bodybg">
+    <h1 id="testid"></h1>
+    <div id="audiocontroloutter">
+      <div id="audiocontrolinner">
+        <div class="menuspaceleft"></div>
+        <div id="menucontrol" class="menucontrol unselectable displaynone"><div id="menubutton">Menu</div></div>
+        <div id="ac1" class="audiocontrol"><div id="bgmbutton"></div></div>
+        <div id="ac2" class="audiocontrol"><div id="sfxbutton"></div></div>
+      </div></div>
+      <div id="gameplatformoutter">
+        <div id="gameplatform">
+          <div id="gameblock" class="defaultcursor">
+            <div class="topstatbar">
+              <div class="entireexpblock">
+                <div class="expblock">
+                  EXP:</div>
+                  <div class="expbarblock">
+                    <div id="expbar">
+                      <div id="expbartop"></div>
+                      <div id="expbarinside"></div>
+                    </div>
+
+                    <div id="expbarback"></div><span id="expnumbers" class="expnumbers"><span id="playerexp"></span>/<span id="levelexpmax"></span></span>
+                  </div>
+                </div>
+                <div id="playerinfo">
+                  <div id="playername"></div>
+                  <div id="playerclass">Novice</div>
+                  <div id="playerlevel">LVL 1</div>
+                </div>
+                <div id="playergold">G: </div>
+              </div>
+
+              <!-- Begin Game Field -->
+              <div id="gamefield" class="gamefield unselectable">
+                <div id="goeast">
+                  <div id="goeasttext">To Town</div>
+                </div>
+                <div id="gowestarrow" class="displaynone"></div>
+                <div id="gowest">
+                  <div id="gowesttext"></div>
+                </div>
+                <div id="backescapeblock" class="backescapeblock">
+                  <div id="backescape" class="backescape">Escape
+                  </div>
+                </div>
+                <div id="msgplayerheal" class="displaynone"></div>
+                <div id="msglvlup"></div>
+                <div id="msgaddgold"></div>
+                <div id="msgdiv" class="msgdiv"></div>
+                <div id="regmsgblock" class="regmsgblock">
+                  <div id="regmsgtext" class="regmsgtext"></div>
+                  <div id="closemsg" class="closemsg">Close
+                  </div>
+                </div>
+                <div id="sellerblock" class="sellerblock">
+
+                  <div id="sellertext" class="sellertext">
+                  </div>
+                  <div id="selltableblock">
+                    <table id="selltable">
+                    </table>
+                  </div>
+                  <div id="totalgoldtext" class="totalgoldtext">Total:
+                  </div>
+                  <div id="sellbutton" class="closemsg">Sell
+                  </div>
+                  <div id="closemsgsell" class="closemsg">Close
+                  </div>
+                </div>
+                <div id="loginblock"><div id="loginblockinner">
+                  <div id="loginmenubutton">Sign In</div>
+                  <div id="createmenubutton">Create Account</div>
+                  <div id="guestmenubutton">Guest - No Saving</div>
+                </div></div>
+                <div id="accountblock" class="displaynone">
+                  <div id="accountpopupmsg" class="popupmsg"></div>
+                  <div id="loginfield"></div>
+                    <form method="POST" id="loginform">
+                      <div id="signin_title" class="displaynone">Sign In</div>
+                      <div id="ca_title" class="displaynone">Create Account</div>
+                  <div id="emailinput">Email: <input type="email" id="eid" name="eid" placeholder="youraddress@email.com"><br></div>
+                  <div id="passwordinput">Password: <input type="password" id="pwd" name="pwd" placeholder="password"><br></div>
+                </form>
+                  <div id="userloginbutton" class="gomenubutton">Go!</div>
+                  <div id="newaccountbutton" class="gomenubutton">Go!</div>
+                </div>
+                <div id="menumsgblock" class="displaynone">
+                <div id="mainmenu_title">Main Menu</div>
+                  <div id="savebutton" class="mainmenubutton">Save Game</div></div>
+                <div id="enterplayername" class="enterplayername displaynone">
+                  <div id="playerinputinnerblock">
+                    <div id="playerinputblock">
+                      <div id="playerentername">Name your character:</div>
+                      <input type="text" name="playernameinput" id="playernameinput">
+                      <div id="playernamebutton" class="playernamebutton">Enter</div>
+                    </div>
+                  </div>
+                </div>
+                <div id="startscreen" class="startscreen"> </div>
+                <!-- Map Field -->
+                <div id="beachfield" class="beachfield"> </div>
+                <div id="plainsfield" class="plainsfield"> </div>
+                <div id="townfield" class="townfield">
+                  <div id="townseller" class="townseller"> </div>
+                  <div id="townsellername" class="townsellername">Merchant</div>
+                  <div id="fortressguard" class="fortressguard"></div>
+                  <div id="fortressguardname" class="fortressguardname">Fortress Guard</div>
+                  <div id="juiceseller" class="juiceseller"> </div>
+                  <div id="juicesellername" class="juicesellername">Juice Vendor</div>
+                </div>
+                <!-- Gameover -->
+                <div id="gameoverfield">
+                </div>
+                <div id="gameovertextbox">
+                  YOU DIED
+                  <div id="tryagaintextbox" class="pointercursor">Spawn In Town</div>
+                </div>
+                <!-- Battlefield -->
+                <div id="battlefield" class="battlefieldbeach">
+                  <div id="msgexpup">
+                  </div>
+                  <div id="msgmonsteratk"></div>
+                  <div id="msgplayeratk"></div>
+
+
+                  <div id="monsterblock">
+                    <div id="monsterimageblock">
+                      <div id="myImage" class="monster knifecursor"></div>
+                    </div>
+                    <div id="monsterHPbarblock">
+                      <div id="monsterHPbar">
+                        <div id="monsterHPbarinside"></div>
+                      </div>
+                      <div id="monsterHPbarBack"></div><span class="monsterHPnumbers"><span id="monsterhealth"> </span>/<span id="monsterhealthmax"></span></span>
+                    </div>
+                  </div>
+                  <div id="lootdropsblock"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Player Stat Info -->
+            <div id="playerpanelblock">
+              <div class="playerentirehpblock">
+                <div id="playerhpblock" class="playerhpblock">
+                  HP: </div>
+                  <div class="playerhpbarblock">
+                    <div id="playerHPbar">
+                      <div id="playerHPbarinside"></div>
+                    </div>
+                    <div id="playerHPbarBack"></div><span class="playerHPnumbers"><span id="playerhealth"></span>/<span id="playerhealthmax"></span></span>
+                  </div>
+                </div>
+
+                <div class="inventoryblockouter unselectable">
+                  <table id="inventorytable" class="inventoryblock" cellspacing="0">
+                    <tr id="firstinvrow" class="inventoryhead">
+                      <td id="inv1" class="emptyInv"></td>
+                      <td id="inv2" class="emptyInv"></td>
+                      <td id="inv3" class="emptyInv"></td>
+                      <td id="inv4" class="emptyInv"></td>
+                      <td id="inv5" class="emptyInv"></td>
+                      <td id="inv6" class="emptyInv"></td>
+                    </tr>
+                    <tr id="secondinvrow">
+                      <td id="inv7" class="emptyInv"></td>
+                      <td id="inv8" class="emptyInv"></td>
+                      <td id="inv9" class="emptyInv"></td>
+                      <td id="inv10" class="emptyInv"></td>
+                      <td id="inv11" class="emptyInv"></td>
+                      <td id="inv12" class="emptyInv"></td>
+                    </tr>
+                  </table>
+                </div>
+
+                <div class="statblockouter">
+                  <table class="statblock unselectable" cellspacing="0">
+                    <tr class="stathead">
+                      <td  style="border-left:0">STR</td>
+                      <td>DEX</td>
+                      <td>VIT</td>
+                      <td>INT</td>
+                      <td>AGI</td>
+                      <td>LUK</td>
+                      <td id="statheadstat" style="border-bottom: none; font-weight:normal" class="displaynone">Stat</td>
+                    </tr>
+                    <tr>
+                      <td id="statstr" style="border-left:0"></td>
+                      <td id="statdex"></td>
+                      <td id="statvit"></td>
+                      <td id="statint"></td>
+                      <td id="statagi"></td>
+                      <td id="statluk"></td>
+                      <td id="statpoint" class="displaynone">Points</td>
+                    </tr>
+                    <tr  id="statadd" class="displaynone unselectable">
+                      <td id="statstradd" class="statptadd" style="border-left:0">+</td>
+                      <td id="statdexadd" class="statptadd">+</td>
+                      <td id="statvitadd" class="statptadd">+</td>
+                      <td id="statintadd" class="statptadd">+</td>
+                      <td id="statagiadd" class="statptadd">+</td>
+                      <td id="statlukadd" class="statptadd">+</td>
+                      <td id="statpointadd" style="font-weight:bold;"></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- Test Form for Login -->
+        <!-- <div id="loginbox" style="margin:10px auto;width:200px;background:white;border:2px solid black;">
+          <div id="loginboxinner" style="margin: 10px auto; width: 130px;">
+            <form method="POST" id="loginform">
+              <input type="email" id="eid" name="eid" placeholder="youraddress@email.com"><br>
+              <input type="password" id="pwd" name="pwd" placeholder="password"><br>
+              <button type="submit" id="userloginbutton">Login</button>
+              <button type="submit" id="newaccountbutton">Create Account</button>
+            </form>
+          </div>
+        </div> -->
+
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.js"></script>
+<script src="rogo.js"></script>
+<div class="hidden">
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var images = new Array()
+function preload() {
+for (i = 0; i < preload.arguments.length; i++) {
+images[i] = new Image()
+images[i].src = preload.arguments[i]
+}
+}
+preload(
+"/images/poring_nobg.png",
+"/images/1012.png",
+"/images/909.gif",
+"/images/sfxmute.png",
+"/images/bgmmute.png"
+)
+//--><!]]>
+</script>
+
+<audio preload="auto">
+<source src="/sounds/login.wav" type="audio/wav">
+<source src="/bgm/08.mp3" type="audio/mp3">
+<source src="/bgm/12.mp3" type="audio/mp3">
+<source src="/sounds/heal.wav" type="audio/wav">
+<source src="/sounds/resurrection.wav" type="audio/wav">
+<source src="/sounds/_novice_attack.wav" type="audio/wav">
+<source src="/sounds/_hit_dagger.wav" type="audio/wav">
+<source src="/sounds/poring_attack.wav" type="audio/wav">
+<source src="/sounds/roda_frog_attack1.wav" type="audio/wav">
+<source src="/sounds/roda_frog_damage.wav" type="audio/wav">
+<source src="/sounds/poring_die.wav" type="audio/wav">
+<source src="/sounds/roda_frog_die.wav" type="audio/wav">
+<source src="/sounds/poring_move.wav" type="audio/wav">
+<source src="/sounds/roda_frog_stand.wav" type="audio/wav">
+<source src="/sounds/_enemy_hit1.wav" type="audio/wav">
+<source src="/sounds/_enemy_hit2.wav" type="audio/wav">
+<source src="/sounds/_enemy_hit3.wav" type="audio/wav">
+<source src="/sounds/_enemy_hit4.wav" type="audio/wav">
+<source src="/sounds/portal.wav" type="audio/wav">
+<source src="/sounds/level_up.mp3" type="audio/mp3">
+
+Your browser does not support the audio elements.
+</audio>
+</div>
+</body>
+</html>
