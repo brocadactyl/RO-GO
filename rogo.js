@@ -30,7 +30,7 @@ var mapState = "town";
 var monsterMaxHP = 50;
 
 var monsterHealth = monsterMaxHP;
-
+ 
 var playerName = "";
 var playerExp = 0;
 var extraEXP = 0;
